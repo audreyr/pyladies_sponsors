@@ -4,7 +4,7 @@ from sponsors.models import Sponsor
 
 class SponsorAdmin(admin.ModelAdmin):
     list_display = ('name', 'slug', 'pub_date')
-    fields = ['name', 'slug', 'pub_date']
+    fields = ['name', 'slug', 'logo', 'link', 'description', 'category']
     prepopulated_fields = {"slug": ("name",)}
     save_on_top = True
     search_fields = ['name']
