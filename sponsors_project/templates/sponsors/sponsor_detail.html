@@ -7,8 +7,13 @@
 {% block content %}
 <h1>{{ sponsor.name }}</h1>
 
-<h3>Date Published</h3>
-<p> {{ sponsor.pub_date }}</p>
+<h3>Sponsor since</h3>
+<p>{{ sponsor.pub_date }}</p>
+
+<h3>Websites</h3>
+<h4>Homepage</h4>
+<p><a href="{{ sponsor.homepage_link }}">{{ sponsor.homepage_link }}</a></p>
+<p><a href="{{ sponsor.careers_link }}">{{ sponsor.careers_link }}</a></p>
 
 {% endblock %}
 

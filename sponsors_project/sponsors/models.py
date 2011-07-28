@@ -17,7 +17,8 @@ class Sponsor(models.Model):
     slug = models.SlugField()
     pub_date = models.DateField(_('Date Published'), auto_now_add=True)
     logo = models.ImageField(_('Logo'), upload_to='sponsor_logos', null=True, blank=True)
-    link = models.URLField(_('Link'), null=True, blank=True)
+    homepage_link = models.URLField(_('Homepage Link'), null=True, blank=True)
+    careers_link = models.URLField(_('Careers Link'), null=True, blank=True)
     description = models.TextField(_('Description'), max_length=1000)
     category = models.CharField(max_length=2, choices=CATEGORY_CHOICES)
 
