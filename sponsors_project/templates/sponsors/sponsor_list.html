@@ -8,11 +8,17 @@ All Sponsors
 <h1>All Sponsors</h1>
 
 {% if latest_sponsor_list %}
-    <ul>
+    <div class="twelve columns clearfix">
     {% for sponsor in latest_sponsor_list %}
-        <li><img src="{{ MEDIA_URL }}{{ sponsor.logo }}" /> <a href="{% url sponsor_detail sponsor.slug %}">{{ sponsor.name }}</a></li>
+        <div class="four columns alpha"><img src="{{ MEDIA_URL }}{{ sponsor.logo }}" width="150px" /></div>
+        <div class="eight columns omega">
+        	<a href="{% url sponsor_detail sponsor.slug %}">{{ sponsor.name }}</a>
+        	<p>
+        		{{ sponsor.short_description }}
+        	</p>
+        </div>
     {% endfor %}
-    </ul>
+    </div>
 {% else %}
     <p>No sponsors are available.</p>
 {% endif %}
