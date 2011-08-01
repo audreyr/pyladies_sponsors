@@ -5,7 +5,9 @@
 {% endblock %}
 
 {% block content %}
+<div class="sixteen clearfix">
 
+<div class="eight columns alpha">
 <h2>{{ sponsor.name }}</h2>
 
 <h3>Sponsor since</h3>
@@ -20,6 +22,13 @@
 
 <h3>Thank You</h3>
 {{ sponsor.description|safe }}
+</div>
+
+<div class="four columns omega">
+	<img src="{{ MEDIA_URL }}{{ sponsor.logo }}" width="200px" />
+</div>
+
+</div>
 
 {% endblock %}
 
