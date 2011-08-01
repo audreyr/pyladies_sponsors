@@ -10,7 +10,7 @@ All Sponsors
 {% if latest_sponsor_list %}
     <ul>
     {% for sponsor in latest_sponsor_list %}
-        <li><a href="{% url sponsor_detail sponsor.slug %}">{{ sponsor.name }}</a></li>
+        <li><img src="{{ MEDIA_URL }}{{ sponsor.logo }}" /> <a href="{% url sponsor_detail sponsor.slug %}">{{ sponsor.name }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
