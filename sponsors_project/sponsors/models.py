@@ -19,6 +19,7 @@ class Sponsor(models.Model):
     logo = models.ImageField(_('Logo'), upload_to='sponsor_logos', null=True, blank=True)
     homepage_link = models.URLField(_('Homepage Link'), null=True, blank=True)
     careers_link = models.URLField(_('Careers Link'), null=True, blank=True)
+    short_description = models.TextField(_('Short Description'), max_length=300)
     description = models.TextField(_('Description'), max_length=1000)
     category = models.CharField(max_length=2, choices=CATEGORY_CHOICES)
 
