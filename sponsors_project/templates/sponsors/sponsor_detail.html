@@ -5,7 +5,8 @@
 {% endblock %}
 
 {% block content %}
-<h1>{{ sponsor.name }}</h1>
+
+<h2>{{ sponsor.name }}</h2>
 
 <h3>Sponsor since</h3>
 <p>{{ sponsor.pub_date }}</p>
@@ -13,7 +14,12 @@
 <h3>Websites</h3>
 <h4>Homepage</h4>
 <p><a href="{{ sponsor.homepage_link }}">{{ sponsor.homepage_link }}</a></p>
+
+<h4>Careers</h4>
 <p><a href="{{ sponsor.careers_link }}">{{ sponsor.careers_link }}</a></p>
+
+<h3>Thank You</h3>
+{{ sponsor.description|safe }}
 
 {% endblock %}
 

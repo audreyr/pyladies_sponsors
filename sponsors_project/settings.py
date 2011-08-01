@@ -120,6 +120,7 @@ INSTALLED_APPS = (
     'startcbv',
     'south',
     'sponsors',
+    'fixture_generator',
 )
 
 # A sample logging configuration. The only tangible logging
