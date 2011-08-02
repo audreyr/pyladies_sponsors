@@ -4,6 +4,16 @@
 Impact of Sponsors
 {% endblock %}
 
+{% block extra_head %}
+    <style type="text/css" media="screen"> 
+        #holder {
+            margin: -70px 0 0 -50px;
+            width: 700px;
+            height: 700px;
+        }
+    </style> 
+{% endblock %}
+
 {% block content %}
 <h1>Impact of Sponsors</h1>
 
@@ -12,6 +22,49 @@ Impact of Sponsors
         <p>
             Here is a breakdown of how the sponsorship money has been used.
         </p>
+        <table>
+            <tr> 
+                <th>Ruby</th> 
+                <td>40%</td> 
+            </tr> 
+            <tr> 
+                <th>JavaScript</th> 
+                <td>26%</td> 
+            </tr> 
+            <tr> 
+                <th>Shell</th> 
+                <td>5%</td> 
+            </tr> 
+            <tr> 
+                <th>Python</th> 
+                <td>5%</td> 
+            </tr> 
+            <tr> 
+                <th>PHP</th> 
+                <td>4%</td> 
+            </tr> 
+            <tr> 
+                <th>C</th> 
+                <td>4%</td> 
+            </tr> 
+            <tr> 
+                <th>Perl</th> 
+                <td>3%</td> 
+            </tr> 
+            <tr> 
+                <th>C++</th> 
+                <td>2%</td> 
+            </tr> 
+            <tr> 
+                <th>Java</th> 
+                <td>2%</td> 
+            </tr> 
+            <tr> 
+                <th>Objective-C</th> 
+                <td>2%</td> 
+            </tr> 
+        </table> 
+        <div id="holder"></div> 
     </div>
     <div class="three columns omega">
     	<p>
@@ -22,4 +75,9 @@ Impact of Sponsors
     	</p>
     </div>
 </div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ STATIC_URL }}js/raphael.js"></script>
+<script src="{{ STATIC_URL }}js/pie.js"></script>
 {% endblock %}
