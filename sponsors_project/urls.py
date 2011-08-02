@@ -11,7 +11,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
-    url(r"^$", direct_to_template, {"template": "impact/index.html",}, name="impact"),
+    url(r"impact/", direct_to_template, {"template": "impact/index.html",}, name="impact"),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += patterns('sponsors.views',
